@@ -90,9 +90,9 @@
                                             <td>PKP</td>
                                         </tr>
                                         <tr>
-                                            <td>01-IKR-JSA/VII/2024</td>
+                                            <td>02-IKR-JSA/VII/2024</td>
                                             <td>Sewa</td>
-                                            <td>Rumah</td>
+                                            <td>Apartemen</td>
                                             <td>45/90</td>
                                             <td>Unit</td>
                                             <td>1</td>
@@ -108,9 +108,9 @@
                                             <td>PKP</td>
                                         </tr>
                                         <tr>
-                                            <td>01-IKR-JSA/VII/2024</td>
+                                            <td>03-IKR-JSA/VII/2024</td>
                                             <td>Sewa</td>
-                                            <td>Rumah</td>
+                                            <td>Kontrakan</td>
                                             <td>45/90</td>
                                             <td>Unit</td>
                                             <td>1</td>
@@ -126,9 +126,9 @@
                                             <td>PKP</td>
                                         </tr>
                                         <tr>
-                                            <td>01-IKR-JSA/VII/2024</td>
+                                            <td>04-IKR-JSA/VII/2024</td>
                                             <td>Sewa</td>
-                                            <td>Rumah</td>
+                                            <td>Gedung</td>
                                             <td>45/90</td>
                                             <td>Unit</td>
                                             <td>1</td>

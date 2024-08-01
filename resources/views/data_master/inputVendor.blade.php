@@ -52,96 +52,45 @@
                                 <table class="table table-hover text-nowrap">
                                     <thead>
                                         <tr>
-                                            <th>Nomor Pengajuan</th>
-                                            <th>Jasa</th>
-                                            <th>Jenis</th>
-                                            <th>Type</th>
-                                            <th>Uom</th>
-                                            <th>Qty</th>
-                                            <th>Periode</th>
-                                            <th>Starting Periode</th>
-                                            <th>Harga</th>
-                                            <th>Total Harga</th>
-                                            <th>Branch</th>
-                                            <th>Bulan</th>
-                                            <th>Tahun</th>
-                                            <th>Vendor</th>
+                                            <th>Nomor Vendor</th>
+                                            <th>Jenis Vendor</th>
+                                            <th>Nama Vendor</th>
                                             <th>Alamat</th>
+                                            <th>Contact Person</th>
+                                            <th>No. Telp/HP</th>
+                                            <th>Nomor NPWP</th>
                                             <th>Status PKP</th>
+                                            <th>Category</th>
+                                            <th>Product</th>
+                                            <th>Upload</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>01-IKR-JSA/VII/2024</td>
-                                            <td>Sewa</td>
-                                            <td>Rumah</td>
-                                            <td>45/90</td>
-                                            <td>Unit</td>
-                                            <td>1</td>
-                                            <td>12</td>
-                                            <td>Agustus 2024</td>
-                                            <td>1.000.000</td>
-                                            <td>12.000.000</td>
-                                            <td>Jakarta Selatan</td>
-                                            <td>Juli</td>
-                                            <td>2024</td>
+                                            <td>00001</td>
+                                            <td>Perusahaan</td>
                                             <td>PT Mitra Bersama</td>
                                             <td>Jl Bojong Koneng No 10 xxx</td>
+                                            <td>Cecep</td>
+                                            <td>0813-112121212</td>
+                                            <td>01-02.03121142</td>
                                             <td>PKP</td>
+                                            <td>Barang & Jasa</td>
+                                            <td>Splicer</td>
+                                            <td>NIB/KTP</td>
                                         </tr>
                                         <tr>
-                                            <td>01-IKR-JSA/VII/2024</td>
-                                            <td>Sewa</td>
-                                            <td>Rumah</td>
-                                            <td>45/90</td>
-                                            <td>Unit</td>
-                                            <td>1</td>
-                                            <td>12</td>
-                                            <td>Agustus 2024</td>
-                                            <td>1.000.000</td>
-                                            <td>12.000.000</td>
-                                            <td>Jakarta Selatan</td>
-                                            <td>Juli</td>
-                                            <td>2024</td>
+                                            <td>00002</td>
+                                            <td>Perusahaan</td>
                                             <td>PT Mitra Bersama</td>
                                             <td>Jl Bojong Koneng No 10 xxx</td>
+                                            <td>Cecep</td>
+                                            <td>0813-112121212</td>
+                                            <td>01-02.03121142</td>
                                             <td>PKP</td>
-                                        </tr>
-                                        <tr>
-                                            <td>01-IKR-JSA/VII/2024</td>
-                                            <td>Sewa</td>
-                                            <td>Rumah</td>
-                                            <td>45/90</td>
-                                            <td>Unit</td>
-                                            <td>1</td>
-                                            <td>12</td>
-                                            <td>Agustus 2024</td>
-                                            <td>1.000.000</td>
-                                            <td>12.000.000</td>
-                                            <td>Jakarta Selatan</td>
-                                            <td>Juli</td>
-                                            <td>2024</td>
-                                            <td>PT Mitra Bersama</td>
-                                            <td>Jl Bojong Koneng No 10 xxx</td>
-                                            <td>PKP</td>
-                                        </tr>
-                                        <tr>
-                                            <td>01-IKR-JSA/VII/2024</td>
-                                            <td>Sewa</td>
-                                            <td>Rumah</td>
-                                            <td>45/90</td>
-                                            <td>Unit</td>
-                                            <td>1</td>
-                                            <td>12</td>
-                                            <td>Agustus 2024</td>
-                                            <td>1.000.000</td>
-                                            <td>12.000.000</td>
-                                            <td>Jakarta Selatan</td>
-                                            <td>Juli</td>
-                                            <td>2024</td>
-                                            <td>PT Mitra Bersama</td>
-                                            <td>Jl Bojong Koneng No 10 xxx</td>
-                                            <td>PKP</td>
+                                            <td>Barang & Jasa</td>
+                                            <td>Splicer</td>
+                                            <td>NIB/KTP</td>
                                         </tr>
                                     </tbody>
                                 </table>

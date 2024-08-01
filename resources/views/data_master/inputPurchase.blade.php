@@ -52,15 +52,14 @@
                                 <table class="table table-hover text-nowrap">
                                     <thead>
                                         <tr>
+                                            <th>No</th>
                                             <th>Nomor Pengajuan</th>
-                                            <th>Jasa</th>
-                                            <th>Jenis</th>
+                                            <th>Nama Barang</th>
+                                            <th>Merk</th>
                                             <th>Type</th>
                                             <th>Uom</th>
                                             <th>Qty</th>
-                                            <th>Periode</th>
-                                            <th>Starting Periode</th>
-                                            <th>Harga</th>
+                                            <th>Harga Satuan</th>
                                             <th>Total Harga</th>
                                             <th>Branch</th>
                                             <th>Bulan</th>
@@ -72,16 +71,15 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>01-IKR-JSA/VII/2024</td>
-                                            <td>Sewa</td>
-                                            <td>Rumah</td>
-                                            <td>45/90</td>
-                                            <td>Unit</td>
                                             <td>1</td>
-                                            <td>12</td>
-                                            <td>Agustus 2024</td>
-                                            <td>1.000.000</td>
-                                            <td>12.000.000</td>
+                                            <td>01-IKR-BRG/VII/2024</td>
+                                            <td>Splicer</td>
+                                            <td>Joinwit</td>
+                                            <td>JW-3208</td>
+                                            <td>Unit</td>
+                                            <td>2</td>
+                                            <td>10.000.000</td>
+                                            <td>20.000.000</td>
                                             <td>Jakarta Selatan</td>
                                             <td>Juli</td>
                                             <td>2024</td>
@@ -90,16 +88,15 @@
                                             <td>PKP</td>
                                         </tr>
                                         <tr>
-                                            <td>01-IKR-JSA/VII/2024</td>
-                                            <td>Sewa</td>
-                                            <td>Rumah</td>
-                                            <td>45/90</td>
+                                            <td>2</td>
+                                            <td>01-IKR-BRG/VII/2024</td>
+                                            <td>Splicer</td>
+                                            <td>Joinwit</td>
+                                            <td>JW-3208</td>
                                             <td>Unit</td>
-                                            <td>1</td>
-                                            <td>12</td>
-                                            <td>Agustus 2024</td>
-                                            <td>1.000.000</td>
-                                            <td>12.000.000</td>
+                                            <td>2</td>
+                                            <td>10.000.000</td>
+                                            <td>20.000.000</td>
                                             <td>Jakarta Selatan</td>
                                             <td>Juli</td>
                                             <td>2024</td>
@@ -107,42 +104,7 @@
                                             <td>Jl Bojong Koneng No 10 xxx</td>
                                             <td>PKP</td>
                                         </tr>
-                                        <tr>
-                                            <td>01-IKR-JSA/VII/2024</td>
-                                            <td>Sewa</td>
-                                            <td>Rumah</td>
-                                            <td>45/90</td>
-                                            <td>Unit</td>
-                                            <td>1</td>
-                                            <td>12</td>
-                                            <td>Agustus 2024</td>
-                                            <td>1.000.000</td>
-                                            <td>12.000.000</td>
-                                            <td>Jakarta Selatan</td>
-                                            <td>Juli</td>
-                                            <td>2024</td>
-                                            <td>PT Mitra Bersama</td>
-                                            <td>Jl Bojong Koneng No 10 xxx</td>
-                                            <td>PKP</td>
-                                        </tr>
-                                        <tr>
-                                            <td>01-IKR-JSA/VII/2024</td>
-                                            <td>Sewa</td>
-                                            <td>Rumah</td>
-                                            <td>45/90</td>
-                                            <td>Unit</td>
-                                            <td>1</td>
-                                            <td>12</td>
-                                            <td>Agustus 2024</td>
-                                            <td>1.000.000</td>
-                                            <td>12.000.000</td>
-                                            <td>Jakarta Selatan</td>
-                                            <td>Juli</td>
-                                            <td>2024</td>
-                                            <td>PT Mitra Bersama</td>
-                                            <td>Jl Bojong Koneng No 10 xxx</td>
-                                            <td>PKP</td>
-                                        </tr>
+
                                     </tbody>
                                 </table>
                             </div>
