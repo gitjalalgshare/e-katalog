@@ -29,7 +29,7 @@
                             <div class="container-fluid">
                                 <div class="row mt-3">
                                     <div class="col-9">
-                                        <button type="button" class="btn btn-primary">Add</button>
+                                        <a href="{{ route('form.purchase') }}" class="btn btn-primary">Add</a>
                                         <button type="button" class="btn btn-secondary">Edit</button>
                                         <button type="button" class="btn btn-danger">Delete</button>
                                     </div>

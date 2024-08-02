@@ -8,7 +8,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Input Data Barang</h1>
+                        <h1>Data Barang</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
@@ -29,7 +29,8 @@
                             <div class="container-fluid">
                                 <div class="row mt-3">
                                     <div class="col-9">
-                                        <button type="button" class="btn btn-primary">Add</button>
+
+                                        <a href="#" class="btn btn-primary">Add</a>
                                         <button type="button" class="btn btn-secondary">Edit</button>
                                         <button type="button" class="btn btn-danger">Delete</button>
                                     </div>
