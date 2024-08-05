@@ -5,6 +5,7 @@ use App\Http\Controllers\inputBarangController;
 use App\Http\Controllers\InputJasaController;
 use App\Http\Controllers\inputPurchaseController;
 use App\Http\Controllers\formPurchaseController;
+use App\Http\Controllers\editformPurchaseController;
 use App\Http\Controllers\inputVendorController;
 use App\Http\Controllers\katalogBarangController;
 use App\Http\Controllers\katalogJasaController;
@@ -20,6 +21,7 @@ Route::get('/inputJasa', [InputJasaController::class, 'input_jasa'])->name('inpu
 Route::get('/inputBarang', [inputBarangController::class, 'input_barang'])->name('input.barang');
 Route::get('/inputPurchase', [inputPurchaseController::class, 'input_purchase'])->name('input.purchase');
 Route::get('/formPurchase', [formPurchaseController::class, 'form_purchase'])->name('form.purchase');
+Route::get('/editformPurchase', [editformPurchaseController::class, 'editform_purchase'])->name('editform.purchase');
 Route::get('/inputVendor', [inputVendorController::class, 'input_vendor'])->name('input.vendor');
 Route::get('/katalogBarang', [katalogJasaController::class, 'katalog_jasa'])->name('katalog.jasa');
 Route::get('/katalogJasa', [katalogBarangController::class, 'katalog_barang'])->name('katalog.barang');

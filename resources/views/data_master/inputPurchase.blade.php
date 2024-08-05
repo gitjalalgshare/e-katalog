@@ -30,7 +30,7 @@
                                 <div class="row mt-3">
                                     <div class="col-9">
                                         <a href="{{ route('form.purchase') }}" class="btn btn-primary">Add</a>
-                                        <button type="button" class="btn btn-secondary">Edit</button>
+                                        <a href="{{ route('editform.purchase') }}" class="btn btn-secondary">Edit</a>
                                         <button type="button" class="btn btn-danger">Delete</button>
                                     </div>
                                     <div class="card-tools">
