@@ -36,7 +36,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ route('input.barang') }}" class="nav-link">
+                            <a href="{{ route('data.barang') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Data Barang</p>
                             </a>

@@ -17,8 +17,18 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', [AdminController::class, 'dashboard'])->name('dashboard');
-Route::get('/inputJasa', [InputJasaController::class, 'input_jasa'])->name('input.jasa');
+
+//barang
+Route::get('/dataBarang', [inputBarangController::class, 'data_barang'])->name('data.barang');
 Route::get('/inputBarang', [inputBarangController::class, 'input_barang'])->name('input.barang');
+Route::post('/simpanBarang', [inputBarangController::class, 'simpan_barang'])->name('simpan.barang');
+Route::get('/getDataBarang', [inputBarangController::class, 'getDataBarang'])->name('getDataBarang');
+
+Route::get('/editDataBarang/{id}', [inputBarangController::class, 'editDataBarang'])->name('editDataBarang');
+Route::post('/updateDataBarang/{id}', [inputBarangController::class, 'updateDataBarang'])->name('update.barang');
+
+Route::get('/inputJasa', [InputJasaController::class, 'input_jasa'])->name('input.jasa');
+
 Route::get('/inputPurchase', [inputPurchaseController::class, 'input_purchase'])->name('input.purchase');
 Route::get('/formPurchase', [formPurchaseController::class, 'form_purchase'])->name('form.purchase');
 Route::get('/editformPurchase', [editformPurchaseController::class, 'editform_purchase'])->name('editform.purchase');
