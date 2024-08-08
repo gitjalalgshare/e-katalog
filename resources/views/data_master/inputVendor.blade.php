@@ -28,11 +28,11 @@
                         <div class="card">
                             <div class="container-fluid">
                                 <div class="row mt-3">
-                                    <div class="col-9">
+                                    <div class="col">
                                         {{-- Start Modals Add Data --}}
                                         <!-- Trigger the modal with a button -->
-                                        <button type="button" class="btn btn-primary" data-toggle="modal"
-                                            data-target="#myModal">Add Data</button>
+                                        <bu tton type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">Add Data</bu>
                                         <!-- Modals Input Data Vendor -->
                                         <div id="myModal" class="modal fade" role="dialog">
                                             <div class="modal-dialog">
@@ -103,91 +103,40 @@
                                                                                         placeholder="01-02.03121142">
                                                                                 </div>
                                                                                 <div class="form-group">
-                                                                                    <label>Uom</label>
+                                                                                    <label>Status PKP</label>
                                                                                     <select class="form-control select2"
                                                                                         style="width: 100%;">
                                                                                         <option selected="selected">Pilih
-                                                                                            Uom</option>
-                                                                                        <option>Unit</option>
-                                                                                        <option>Pcs</option>
-                                                                                        <option>Box</option>
-                                                                                        <option>Pack</option>
-                                                                                        <option>Meter</option>
-                                                                                        <option>Sak</option>
+                                                                                            Status PKP</option>
+                                                                                        <option>PKP 1</option>
+                                                                                        <option>PKP 2</option>
+                                                                                        <option>PKP 3</option>
+                                                                                        <option>PKP 4</option>
+                                                                                        <option>PKP 5</option>
+                                                                                        <option>PKP 6</option>
                                                                                     </select>
                                                                                 </div>
                                                                                 <div class="form-group">
-                                                                                    <label for="qtyBarang">Qty</label>
-                                                                                    <input type="text"
-                                                                                        class="form-control" id="qtyBarang"
-                                                                                        placeholder="Qty Barang">
-                                                                                </div>
-                                                                                <div class="form-group">
-                                                                                    <label for="qtyBarang">Harga
-                                                                                        Satuan</label>
-                                                                                    <input type="text"
-                                                                                        class="form-control" id="qtyBarang"
-                                                                                        placeholder="Masukan Harga Satuan">
-                                                                                </div>
-                                                                                <div class="form-group">
-                                                                                    <label for="qtyBarang">Total
-                                                                                        Harga</label>
-                                                                                    <input type="text"
-                                                                                        class="form-control" id="qtyBarang"
-                                                                                        placeholder="20.000.000">
-                                                                                </div>
-                                                                                <div class="form-group">
-                                                                                    <label>Branch</label>
+                                                                                    <label>Category</label>
                                                                                     <select class="form-control select2"
                                                                                         style="width: 100%;">
                                                                                         <option selected="selected">Pilih
-                                                                                            Branch</option>
-                                                                                        <option>Jakarta TImur</option>
-                                                                                        <option>Jakarta Selatan</option>
-                                                                                        <option>Bekasi</option>
-                                                                                        <option>Bogor</option>
-                                                                                        <option>Tangerang</option>
-                                                                                        <option>Medan</option>
+                                                                                            Kategori</option>
+                                                                                        <option>Barang</option>
+                                                                                        <option>Jasa</option>
+                                                                                        <option>Barang & Jasa</option>
                                                                                     </select>
                                                                                 </div>
                                                                                 <div class="form-group">
-                                                                                    <label for="bln">Bulan</label>
-                                                                                    <input class="form-control"
-                                                                                        type="text" value="Agustus"
-                                                                                        aria-label="Disabled input example"
-                                                                                        disabled readonly>
-                                                                                </div>
-                                                                                <div class="form-group">
-                                                                                    <label for="bln">Tahun</label>
-                                                                                    <input class="form-control"
-                                                                                        type="text" value="2024"
-                                                                                        aria-label="Disabled input example"
-                                                                                        disabled readonly>
-                                                                                </div>
-                                                                                <div class="form-group">
-                                                                                    <label>Vendor</label>
+                                                                                    <label>Product</label>
                                                                                     <select class="form-control select2"
                                                                                         style="width: 100%;">
                                                                                         <option selected="selected">Pilih
-                                                                                            Vendor</option>
-                                                                                        <option>PT Mitra Sinergi Telematika
-                                                                                        </option>
-                                                                                        <option>PT Quantum Nusantara
-                                                                                        </option>
-                                                                                        <option>PT Moratelindo </option>
-                                                                                        <option>PT Nuansa</option>
-                                                                                        <option>PT Indah Kargo</option>
-                                                                                        <option>PT Misitel</option>
+                                                                                            Produk</option>
+                                                                                        <option>Splicer</option>
+                                                                                        <option>OPM</option>
+                                                                                        <option>OTDR</option>
                                                                                     </select>
-                                                                                </div>
-
-                                                                                <div class="form-group">
-                                                                                    <label for="bln">Status
-                                                                                        PKP</label>
-                                                                                    <input class="form-control"
-                                                                                        type="text" value="PKP"
-                                                                                        aria-label="Disabled input example"
-                                                                                        disabled readonly>
                                                                                 </div>
                                                                                 <div class="form-group">
                                                                                     <label for="exampleInputFile">Gambar
@@ -197,8 +146,7 @@
                                                                                             <input type="file"
                                                                                                 class="custom-file-input"
                                                                                                 id="exampleInputFile">
-                                                                                            <label
-                                                                                                class="custom-file-label"
+                                                                                            <label class="custom-file-label"
                                                                                                 for="exampleInputFile">Choose
                                                                                                 file</label>
                                                                                         </div>
@@ -209,47 +157,34 @@
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                            <!-- /.card-body -->
-                                                                        </form>
+
                                                                     </div>
-                                                                    <!-- /.card primary -->
+                                                                    <!-- /.card-body -->
+                                                                    </form>
                                                                 </div>
-                                                                <!--/.col (first) -->
+                                                                <!-- /.card primary -->
                                                             </div>
+                                                            <!--/.col (first) -->
                                                         </div>
-                                                        <!-- /.row -->
                                                     </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-primary"
-                                                            data-dismiss="modal">Save</button>
-                                                        <button type="button" class="btn btn-danger"
-                                                            data-dismiss="modal">Cancel</button>
-                                                    </div>
+                                                    <!-- /.row -->
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-primary"
+                                                        data-dismiss="modal">Save</button>
+                                                    <button type="button" class="btn btn-danger"
+                                                        data-dismiss="modal">Cancel</button>
                                                 </div>
                                             </div>
                                         </div>
                                         {{-- End modals add data --}}
-
-
+                                        {{-- start modals buttoon edit --}}
                                         <button type="button" class="btn btn-secondary">Edit</button>
                                         <button type="button" class="btn btn-danger">Delete</button>
                                     </div>
-                                    <div class="card-tools">
-                                        <div class="input-group input-group-sm" style="width: 300px;">
-                                            <input type="text" name="table_search" class="form-control float-right"
-                                                placeholder="Search">
-                                            <div class="input-group-append">
-                                                <button type="submit" class="btn btn-default">
-                                                    <i class="fas fa-search"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
-                            </div><!-- /.container-fluid -->
-
-                            <!-- /.card-header -->
-                            <div class="card-body table-responsive p-0">
+                            </div>
+                            <div class="card-body table-responsive p-1">
                                 <table class="table table-hover text-nowrap">
                                     <thead>
                                         <tr>
@@ -296,19 +231,23 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <!-- /.card-body -->
-                        </div>
-                        <!-- /.card -->
+                        </div><!-- /.container-fluid -->
 
+                        <!-- /.card-header -->
 
-
+                        <!-- /.card-body -->
                     </div>
+                    <!-- /.card -->
+
 
 
                 </div>
-            </div><!-- /.container-fluid -->
-        </section>
-        <!-- /.content -->
+
+
+            </div>
+    </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
 @endsection
