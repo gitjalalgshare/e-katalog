@@ -31,11 +31,11 @@
                                     <div class="col">
                                         {{-- Start Modals Add Data --}}
                                         <!-- Trigger the modal with a button -->
-                                        <bu tton type="button" class="btn btn-primary" data-toggle="modal"
-                                            data-target="#myModal">Add Data</bu>
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModalAddData">Add Data</button>
                                         <!-- Modals Input Data Vendor -->
-                                        <div id="myModal" class="modal fade" role="dialog">
-                                            <div class="modal-dialog">
+                                        <div id="myModalAddData" class="modal fade" role="dialog">
+                                            <div class="modal-dialog modal-lg">
                                                 <!-- Modal content-->
                                                 <div class="modal-content">
                                                     <div class="modal-header">
@@ -68,7 +68,8 @@
                                                                                     <label>Jenis Vendor</label>
                                                                                     <select class="form-control select2"
                                                                                         style="width: 100%;">
-                                                                                        <option selected="selected">Pilih
+                                                                                        <option selected="selected">
+                                                                                            Pilih
                                                                                             Jenis Vendor</option>
                                                                                         <option>Perusahaan</option>
                                                                                         <option>Perorangan</option>
@@ -106,7 +107,8 @@
                                                                                     <label>Status PKP</label>
                                                                                     <select class="form-control select2"
                                                                                         style="width: 100%;">
-                                                                                        <option selected="selected">Pilih
+                                                                                        <option selected="selected">
+                                                                                            Pilih
                                                                                             Status PKP</option>
                                                                                         <option>PKP 1</option>
                                                                                         <option>PKP 2</option>
@@ -120,7 +122,8 @@
                                                                                     <label>Category</label>
                                                                                     <select class="form-control select2"
                                                                                         style="width: 100%;">
-                                                                                        <option selected="selected">Pilih
+                                                                                        <option selected="selected">
+                                                                                            Pilih
                                                                                             Kategori</option>
                                                                                         <option>Barang</option>
                                                                                         <option>Jasa</option>
@@ -131,7 +134,8 @@
                                                                                     <label>Product</label>
                                                                                     <select class="form-control select2"
                                                                                         style="width: 100%;">
-                                                                                        <option selected="selected">Pilih
+                                                                                        <option selected="selected">
+                                                                                            Pilih
                                                                                             Produk</option>
                                                                                         <option>Splicer</option>
                                                                                         <option>OPM</option>
@@ -157,8 +161,15 @@
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-
                                                                     </div>
+                                                                    {{-- Start button modal footer --}}
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-primary"
+                                                                            data-dismiss="modal">Save</button>
+                                                                        <button type="button" class="btn btn-danger"
+                                                                            data-dismiss="modal">Cancel</button>
+                                                                    </div>
+                                                                    {{-- End button modal footer --}}
                                                                     <!-- /.card-body -->
                                                                     </form>
                                                                 </div>
@@ -169,18 +180,174 @@
                                                     </div>
                                                     <!-- /.row -->
                                                 </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-primary"
-                                                        data-dismiss="modal">Save</button>
-                                                    <button type="button" class="btn btn-danger"
-                                                        data-dismiss="modal">Cancel</button>
+                                            </div>
+                                        </div>
+                                        {{-- End modals add data --}}
+
+                                        {{-- Start modals button Edit --}}
+                                        <button type="button" class="btn btn-secondary" data-toggle="modal"
+                                            data-target="#myModalEdit">Edit</button>
+                                        {{-- End modals button Edit --}}
+                                        <!-- Modals Input Data Vendor -->
+                                        <div id="myModalEdit" class="modal fade" role="dialog">
+                                            <div class="modal-dialog modal-lg">
+                                                <!-- Modal content-->
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <div class="container-fluid">
+                                                            <button type="button" class="close"
+                                                                data-dismiss="modal">&times;</button>
+                                                            <h4 class="modal-title">Edit Data Vendor</h4>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        {{-- isi form --}}
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <!-- first column -->
+                                                                <div class="col-md-12">
+                                                                    <!-- general form elements -->
+                                                                    <div class="card card-primary">
+                                                                        <!-- form start -->
+                                                                        <form>
+                                                                            <div class="card-body">
+                                                                                <div class="form-group">
+                                                                                    <label for="idPengajuan">Nomor
+                                                                                        Vendor</label>
+                                                                                    <input class="form-control"
+                                                                                        type="text" value="801010001"
+                                                                                        aria-label="Disabled input example"
+                                                                                        disabled readonly>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label>Jenis Vendor</label>
+                                                                                    <select class="form-control select2"
+                                                                                        style="width: 100%;">
+                                                                                        <option selected="selected">
+                                                                                            Pilih
+                                                                                            Jenis Vendor</option>
+                                                                                        <option>Perusahaan</option>
+                                                                                        <option>Perorangan</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label for="alamat">Alamat</label>
+                                                                                    <input type="alamat"
+                                                                                        class="form-control"
+                                                                                        id="alamat"
+                                                                                        placeholder="Jl. Nama Jalan No..">
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label for="contactPerson">Contact
+                                                                                        Person</label>
+                                                                                    <input type="text"
+                                                                                        class="form-control"
+                                                                                        id="contactPerson"
+                                                                                        placeholder="Masukan Nama">
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label for="telp">No.
+                                                                                        Telp/HP</label>
+                                                                                    <input type="text"
+                                                                                        class="form-control"
+                                                                                        id="telp"
+                                                                                        placeholder="089501100696">
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label for="npwp">Nomor
+                                                                                        NPWP</label>
+                                                                                    <input type="text"
+                                                                                        class="form-control"
+                                                                                        id="npwp"
+                                                                                        placeholder="01-02.03121142">
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label>Status PKP</label>
+                                                                                    <select class="form-control select2"
+                                                                                        style="width: 100%;">
+                                                                                        <option selected="selected">
+                                                                                            Pilih
+                                                                                            Status PKP</option>
+                                                                                        <option>PKP 1</option>
+                                                                                        <option>PKP 2</option>
+                                                                                        <option>PKP 3</option>
+                                                                                        <option>PKP 4</option>
+                                                                                        <option>PKP 5</option>
+                                                                                        <option>PKP 6</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label>Category</label>
+                                                                                    <select class="form-control select2"
+                                                                                        style="width: 100%;">
+                                                                                        <option selected="selected">
+                                                                                            Pilih
+                                                                                            Kategori</option>
+                                                                                        <option>Barang</option>
+                                                                                        <option>Jasa</option>
+                                                                                        <option>Barang & Jasa</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label>Product</label>
+                                                                                    <select class="form-control select2"
+                                                                                        style="width: 100%;">
+                                                                                        <option selected="selected">
+                                                                                            Pilih
+                                                                                            Produk</option>
+                                                                                        <option>Splicer</option>
+                                                                                        <option>OPM</option>
+                                                                                        <option>OTDR</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label for="exampleInputFile">Gambar
+                                                                                        Product</label>
+                                                                                    <div class="input-group">
+                                                                                        <div class="custom-file">
+                                                                                            <input type="file"
+                                                                                                class="custom-file-input"
+                                                                                                id="exampleInputFile">
+                                                                                            <label
+                                                                                                class="custom-file-label"
+                                                                                                for="exampleInputFile">Choose
+                                                                                                file</label>
+                                                                                        </div>
+                                                                                        <div class="input-group-append">
+                                                                                            <span
+                                                                                                class="input-group-text">Upload</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                    </div>
+                                                                    {{-- Start button modal footer --}}
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-primary"
+                                                                            data-dismiss="modal">Save</button>
+                                                                        <button type="button" class="btn btn-danger"
+                                                                            data-dismiss="modal">Cancel</button>
+                                                                    </div>
+                                                                    {{-- End button modal footer --}}
+                                                                    <!-- /.card-body -->
+                                                                    </form>
+                                                                </div>
+                                                                <!-- /.card primary -->
+                                                            </div>
+                                                            <!--/.col (first) -->
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.row -->
                                                 </div>
                                             </div>
                                         </div>
                                         {{-- End modals add data --}}
-                                        {{-- start modals buttoon edit --}}
-                                        <button type="button" class="btn btn-secondary">Edit</button>
-                                        <button type="button" class="btn btn-danger">Delete</button>
+
+                                        {{-- Start modals button Delete --}}
+                                        <button type="button" class="btn btn-danger" id="btn-delete">Delete</button>
+
+                                        {{-- End modals button Delete --}}
+
                                     </div>
                                 </div>
                             </div>
@@ -238,12 +405,7 @@
                         <!-- /.card-body -->
                     </div>
                     <!-- /.card -->
-
-
-
                 </div>
-
-
             </div>
     </div><!-- /.container-fluid -->
     </section>
