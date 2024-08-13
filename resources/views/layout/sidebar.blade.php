@@ -17,7 +17,7 @@
                 <!-- Add icons to the links using the .nav-icon class
                 with font-awesome or any other icon font library -->
                 <li class="nav-item">
-                    <a href="{{ route('dashboard') }}" class="nav-link active">
+                    <a href="{{ route('dashboard') }}" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Dashboard
@@ -26,8 +26,9 @@
                     </a>
                 </li>
                 <li class="nav-header">DATA MASTER</li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
+                <li class="nav-item  {{ request()->is('dataBarang', 'dataJasa', 'dataVendor') ? 'menu-open' : '' }}">
+                    <a href="#"
+                        class="nav-link  {{ request()->is('dataBarang', 'dataJasa', 'dataVendor') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-edit"></i>
                         <p>
                             Input Data
@@ -36,19 +37,22 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ route('data.barang') }}" class="nav-link">
+                            <a href="{{ route('data.barang') }}"
+                                class="nav-link {{ request()->is('dataBarang') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Data Barang</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('data.jasa') }}" class="nav-link">
+                            <a href="{{ route('data.jasa') }}"
+                                class="nav-link {{ request()->is('dataJasa') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Data Jasa</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('input.vendor') }}" class="nav-link">
+                            <a href="{{ route('data.vendor') }}"
+                                class="nav-link {{ request()->is('dataVendor') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Data Vendor</p>
                             </a>

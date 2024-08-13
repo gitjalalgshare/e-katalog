@@ -40,7 +40,7 @@ Route::post('/updateDataJasa/{id}', [InputJasaController::class, 'updateDataJasa
 //End Jasa
 
 //Vendor
-Route::get('/inputVendor', [inputVendorController::class, 'input_vendor'])->name('input.vendor');
+Route::get('/dataVendor', [inputVendorController::class, 'data_vendor'])->name('data.vendor');
 //End Vendor
 
 Route::get('/inputPurchase', [inputPurchaseController::class, 'input_purchase'])->name('input.purchase');

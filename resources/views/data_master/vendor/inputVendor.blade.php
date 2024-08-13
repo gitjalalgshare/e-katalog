@@ -61,8 +61,7 @@
                                                                                         Vendor</label>
                                                                                     <input class="form-control"
                                                                                         type="text" value="801010001"
-                                                                                        aria-label="Disabled input example"
-                                                                                        disabled readonly>
+                                                                                        aria-label="Disabled input example">
                                                                                 </div>
                                                                                 <div class="form-group">
                                                                                     <label>Jenis Vendor</label>
@@ -74,6 +73,13 @@
                                                                                         <option>Perusahaan</option>
                                                                                         <option>Perorangan</option>
                                                                                     </select>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label for="nama">Nama
+                                                                                        Vendor</label>
+                                                                                    <input type="namaVendor"
+                                                                                        class="form-control" id="alamat"
+                                                                                        placeholder="Jl. Nama Jalan No..">
                                                                                 </div>
                                                                                 <div class="form-group">
                                                                                     <label for="alamat">Alamat</label>
