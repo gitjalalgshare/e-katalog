@@ -8,7 +8,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Edit Data Barang</h1>
+                        <h1>Edit Data Jasa</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
@@ -29,7 +29,7 @@
                             <!-- general form elements -->
                             <div class="card card-primary">
                                 <div class="card-header">
-                                    <h3 class="card-title">Form Edit Data Barang</h3>
+                                    <h3 class="card-title">Form Edit Data Jasa</h3>
                                 </div>
                                 <!-- /.card-header -->
                                 <!-- form start -->
