@@ -42,15 +42,9 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('input.jasa') }}" class="nav-link">
+                            <a href="{{ route('data.jasa') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Data Jasa</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('input.purchase') }}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Data Purchase</p>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -59,6 +53,13 @@
                                 <p>Data Vendor</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{ route('input.purchase') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Data Purchase</p>
+                            </a>
+                        </li>
+
                     </ul>
                 </li>
                 <li class="nav-header">LIST KATALOG</li>

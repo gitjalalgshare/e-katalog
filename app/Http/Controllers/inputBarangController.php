@@ -21,10 +21,11 @@ class inputBarangController extends Controller
     {
         $dataBarang = Product::all();
 
-        return view('barang.dataBarang', ['dataBarang'=>$dataBarang]);
+        return view('data_master.barang.dataBarang', ['dataBarang' => $dataBarang]);
     }
 
-    public function getDataBarang(Request $request){
+    public function getDataBarang(Request $request)
+    {
 
         if ($request->ajax()) {
             $datas = Product::all();
@@ -36,10 +37,10 @@ class inputBarangController extends Controller
                 })
                 ->addColumn('action', function ($row) {
                     $btn = '<a href="/editDataBarang/' . $row->id . '" class="btn btn-sm btn-primary edit-barang" > <i class="fas fa-edit"></i> Edit</a>';
-                            //  <a href="#" class="btn btn-sm btn-secondary disable"> <i class="fas fa-trash"></i> Hapus</a>';
+                    //  <a href="#" class="btn btn-sm btn-secondary disable"> <i class="fas fa-trash"></i> Hapus</a>';
                     return $btn;
                 })
-                ->rawColumns(['fotoProduct','action'])   //merender content column dalam bentuk html
+                ->rawColumns(['fotoProduct', 'action'])   //merender content column dalam bentuk html
                 ->escapeColumns()  //mencegah XSS Attack
                 ->toJson(); //merubah response dalam bentuk Json
             // ->make(true);
@@ -48,7 +49,7 @@ class inputBarangController extends Controller
 
     public function input_barang()
     {
-        return view('barang.inputBarang');
+        return view('data_master.barang.inputBarang');
     }
 
 
@@ -62,9 +63,14 @@ class inputBarangController extends Controller
         ]);
 
         if ($request->hasFile('foto_product')) {
-            $file = $request->file('foto_product')->getClientOriginalName();
-            $extension = $request->file('foto_product')->getClientOriginalExtension();
-            $fileName = $file.'_'.time().'.'.$extension;
+            // $file = $request->file('foto_product')->getClientOriginalName();
+            // $extension = $request->file('foto_product')->getClientOriginalExtension();
+            // $fileName = $file.'_'.time().'.'.$extension;
+            // $request->file('foto_product')->move(public_path('storage/image-brg'), $fileName);
+
+            $file = $request->file('foto_product');
+            $fileName = $file->hashName();
+
             $request->file('foto_product')->move(public_path('storage/image-brg'), $fileName);
         } else {
             $fileName = 'foto-blank.jpg';
@@ -79,8 +85,6 @@ class inputBarangController extends Controller
         ]);
 
         return redirect()->route('data.barang');
-
-
     }
 
 
@@ -91,8 +95,7 @@ class inputBarangController extends Controller
 
         $dataBarang = Product::find($id);
 
-        return view('barang.editBarang', ['dataBarang' => $dataBarang]);
-
+        return view('data_master.barang.editBarang', ['dataBarang' => $dataBarang]);
     }
 
 
@@ -107,15 +110,14 @@ class inputBarangController extends Controller
         ]);
 
         if ($request->hasFile('foto_product')) {
-            $file = $request->file('foto_product')->getClientOriginalName();
-            $extension = $request->file('foto_product')->getClientOriginalExtension();
-            $fileName = $file.'_'.time().'.'.$extension;
+            $file = $request->file('foto_product');
+            $fileName = $file->hashName();
+
             $request->file('foto_product')->move(public_path('storage/image-brg'), $fileName);
 
             if ($product->foto_product) {
                 unlink(public_path('storage/image-brg/' . $product->foto_product));
             }
-
         } else {
             $fileName = 'foto-blank.jpg';
         }
@@ -128,8 +130,7 @@ class inputBarangController extends Controller
         $product->save();
 
 
-        return view('barang.dataBarang');
-
+        return view('data_master.barang.dataBarang');
     }
 
 

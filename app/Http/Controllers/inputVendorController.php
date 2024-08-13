@@ -16,7 +16,7 @@ class inputVendorController extends Controller
 
     public function input_vendor()
     {
-        return view('data_master.inputVendor');
+        return view('data_master.vendor.inputVendor');
     }
 
     /**

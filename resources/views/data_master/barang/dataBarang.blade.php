@@ -47,7 +47,7 @@
                                             <th>Merk</th>
                                             <th>Type</th>
                                             <th>Uom</th>
-                                            <th>Gambar Product</th>
+                                            <th class="text-center">Gambar Product</th>
                                             <th>action</th>
                                         </tr>
                                     </thead>
@@ -71,27 +71,25 @@
     </div>
     <!-- /.content-wrapper -->
 
-        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-        {{-- <link href="https://cdn.datatables.net/2.1.3/css/dataTables.dataTables.min.css" rel="stylesheet"> --}}
-        {{-- <script src="https://cdn.datatables.net/2.1.3/js/dataTables.min.js"></script> --}}
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    {{-- <link href="https://cdn.datatables.net/2.1.3/css/dataTables.dataTables.min.css" rel="stylesheet"> --}}
+    {{-- <script src="https://cdn.datatables.net/2.1.3/js/dataTables.min.js"></script> --}}
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
-        <link href="https://cdn.datatables.net/v/dt/dt-1.13.8/fc-4.3.0/datatables.min.css" rel="stylesheet">
-        <script src="https://cdn.datatables.net/v/dt/dt-1.13.8/fc-4.3.0/datatables.min.js"></script>
-    
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
+    <link href="https://cdn.datatables.net/v/dt/dt-1.13.8/fc-4.3.0/datatables.min.css" rel="stylesheet">
+    <script src="https://cdn.datatables.net/v/dt/dt-1.13.8/fc-4.3.0/datatables.min.js"></script>
+
+
     <script type="text/javascript">
-    
         $(document).ready(function() {
             $.noConflict();
             fetch_detail();
-    
-            
-            function fetch_detail() 
-            {
+
+
+            function fetch_detail() {
                 var tabel = $('#tabelBarang').DataTable();
                 tabel.clear().draw();
-    
+
                 $('#tabelBarang').DataTable({
                     // dom: 'Bftip',
                     // layout: {
@@ -120,7 +118,7 @@
                             data: 'DT_RowIndex',
                             name: 'DT_Row_Index',
                             "className": "text-center",
-                            // orderable: false, 
+                            // orderable: false,
                             searchable: false,
                         },
                         {
@@ -137,6 +135,7 @@
                         },
                         {
                             data: 'fotoProduct',
+                            "className": "text-center",
                         },
                         {
                             data: 'action',
@@ -146,9 +145,8 @@
                         },
                     ]
                 });
-    
+
             }
         })
     </script>
-
 @endsection
