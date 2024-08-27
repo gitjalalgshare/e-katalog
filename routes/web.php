@@ -41,6 +41,13 @@ Route::post('/updateDataJasa/{id}', [InputJasaController::class, 'updateDataJasa
 
 //Vendor
 Route::get('/dataVendor', [inputVendorController::class, 'data_vendor'])->name('data.vendor');
+Route::get('/getDataVendor', [inputVendorController::class, 'getDataVendor'])->name('getDataVendor');
+Route::get('/getBarangJasa', [inputVendorController::class, 'getBarangJasa'])->name('getBarangJasa');
+Route::get('/getAutoNo', [inputVendorController::class, 'getAutoNo'])->name('getAutoNo');
+Route::post('/simpanVendor', [inputVendorController::class, 'simpanVendor'])->name('simpan.vendor');
+
+Route::get('/editDataVendor', [inputVendorController::class, 'editDataVendor'])->name('editDataVendor');
+Route::post('/updateDataVendor', [inputVendorController::class, 'updateDataVendor'])->name('updateDataVendor');
 //End Vendor
 
 Route::get('/inputPurchase', [inputPurchaseController::class, 'input_purchase'])->name('input.purchase');
