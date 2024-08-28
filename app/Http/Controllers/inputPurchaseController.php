@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Vendor;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class inputPurchaseController extends Controller
 {
@@ -14,9 +16,27 @@ class inputPurchaseController extends Controller
         //
     }
 
-    public function input_purchase()
+    public function dataPurchase()
     {
-        return view('data_master.inputPurchase');
+        return view('data_master.purchase.dataPurchase');
+    }
+
+    public function inputPurchase()
+    {
+        $cost = DB::table('cost_centers')->select('cost_center')->distinct()->get();
+        $branch = DB::table('branches')->select('nama_branch')->distinct()->orderBy('nama_branch')->get();
+
+
+        return view('data_master.purchase.inputPurchase', compact('cost', 'branch'));
+    }
+
+    public function getVendor(Request $request)
+    {
+        $category = $request->category;
+
+        $vendor = Vendor::where('category', 'like', '%' . $category . '%')->get();
+
+        return response()->json($vendor);
     }
 
     /**

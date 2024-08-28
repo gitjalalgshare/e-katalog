@@ -8,7 +8,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Input Data Vendor</h1>
+                        <h1>Data Vendor</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
@@ -26,7 +26,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
-                            <div class="row mt-3">
+                            <div class="row ml-0 mt-3">
                                 <div class="col">
                                     {{-- Start Modals Add Data --}}
                                     <!-- Trigger the modal with a button -->
@@ -37,11 +37,11 @@
                             </div>
 
                             <div class="card-body table-responsive p-1">
-                                <table class="table table-hover text-nowrap" id="tabelVendor" style="font-size: 12px;">
+                                <table class="table table-hover text-wrap" id="tabelVendor" style="font-size: 12px;">
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>Nomor Vendor</th>
+                                            <th style="width: 100px">Nomor Vendor</th>
                                             <th>Jenis Vendor</th>
                                             <th>Category Product</th>
                                             <th>List Product</th>

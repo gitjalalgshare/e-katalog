@@ -50,8 +50,14 @@ Route::get('/editDataVendor', [inputVendorController::class, 'editDataVendor'])-
 Route::post('/updateDataVendor', [inputVendorController::class, 'updateDataVendor'])->name('updateDataVendor');
 //End Vendor
 
-Route::get('/inputPurchase', [inputPurchaseController::class, 'input_purchase'])->name('input.purchase');
-Route::get('/formPurchase', [formPurchaseController::class, 'form_purchase'])->name('form.purchase');
+//purchase
+Route::get('/dataPurchase', [inputPurchaseController::class, 'dataPurchase'])->name('data.purchase');
+Route::get('/inputPurchase', [inputPurchaseController::class, 'inputPurchase'])->name('input.purchase');
+
+Route::get('/getVendor', [inputPurchaseController::class, 'getVendor'])->name('getVendor');
+//End Purchase
+
+
 Route::get('/editformPurchase', [editformPurchaseController::class, 'editform_purchase'])->name('editform.purchase');
 Route::get('/inputVendor', [inputVendorController::class, 'input_vendor'])->name('input.vendor');
 Route::get('/katalogBarang', [katalogJasaController::class, 'katalog_jasa'])->name('katalog.jasa');

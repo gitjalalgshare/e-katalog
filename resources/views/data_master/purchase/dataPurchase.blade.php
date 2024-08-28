@@ -8,7 +8,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Input Data Purchase</h1>
+                        <h1>Data Purchase</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
@@ -29,7 +29,7 @@
                             <div class="container-fluid">
                                 <div class="row mt-3">
                                     <div class="col-9">
-                                        <a href="{{ route('form.purchase') }}" class="btn btn-primary">Add</a>
+                                        <a href="{{ route('input.purchase') }}" class="btn btn-primary">Add</a>
                                         <a href="{{ route('editform.purchase') }}" class="btn btn-secondary">Edit</a>
                                         <button type="button" class="btn btn-danger">Delete</button>
                                     </div>
