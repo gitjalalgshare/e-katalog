@@ -48,9 +48,7 @@ class EditPurchaseController extends Controller
         }
 
         if ($jmProd > 0) {
-
             $UpdPurchase = DataPurchase::find($request->purId);
-
             $UpdPurchase->update([
                 'no_pengajuan' => $request->noPengajuan,
                 'tgl' => $request->tgl,
@@ -64,7 +62,6 @@ class EditPurchaseController extends Controller
             if ($UpdPurchase) {
 
                 if ($request->category == "Barang") {
-
                     for ($x = 0; $x < count($request->brg_id); $x++) {
                         $listProd = explode("|", $request->brg_id[$x]);
 
