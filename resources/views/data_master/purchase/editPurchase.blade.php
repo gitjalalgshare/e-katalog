@@ -8,7 +8,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Input Data Purchase</h1>
+                        <h1>Edit Data Purchase</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
@@ -29,11 +29,11 @@
                             <!-- general form elements -->
                             <div class="card card-primary">
                                 <div class="card-header">
-                                    <h3 class="card-title">Form Input Data Purchase</h3>
+                                    <h3 class="card-title">Form Edit Data Purchase</h3>
                                 </div>
                                 <!-- /.card-header -->
                                 <!-- form start -->
-                                <form action="{{ route('simpan.purchase') }}" method="post">
+                                <form action="{{ route('update.purchase') }}" method="post">
                                     @csrf
                                     <div class="card-body mb-1">
                                         <div class="row">
@@ -43,11 +43,8 @@
                                                         <span>Nomor Pengajuan</span>
                                                         <input class="form-control form-control-sm" type="text"
                                                             id="noPengajuan" name="noPengajuan"
-                                                            value="{{ old('noPengajuan') }}"
                                                             style="width: 100%; border-color:#9ca0a7;" required>
-                                                        @error('noPengajuan')
-                                                            <span class="text-danger">{{ $message }}</span>
-                                                        @enderror
+                                                        <input type="hidden" id="purId" name="purId" readonly>
                                                     </div>
 
                                                     <div class=" col form-group mb-1">
@@ -63,7 +60,7 @@
                                                         <span>Cost Center</span>
                                                         <select class="form-control form-control-sm" id="costCenter"
                                                             name="costCenter" style="width: 100%; border-color:#9ca0a7;"
-                                                            value="{{ old('costCenter') }}" required>
+                                                            required>
                                                             <option value="">Pilih Cost Center</option>
                                                             @foreach ($cost as $cc)
                                                                 <option value="{{ $cc->cost_center }}">
@@ -77,7 +74,7 @@
                                                         <span>Branch</span>
                                                         <select class="form-control form-control-sm" id="branch"
                                                             name="branch" style="width: 100%; border-color:#9ca0a7;"
-                                                            value="{{ old('branch') }}" required>
+                                                            required>
                                                             <option value="">Pilih Branch</option>
                                                             @foreach ($branch as $b)
                                                                 <option value="{{ $b->nama_branch }}">{{ $b->nama_branch }}
@@ -93,7 +90,7 @@
                                                         <span>Category</span>
                                                         <select class="form-control form-control-sm" id="category"
                                                             name="category" style="width: 100%; border-color:#9ca0a7;"
-                                                            value="{{ old('category') }}" required>
+                                                            required>
                                                             <option value="">Pilih Category</option>
                                                             <option value="Barang">Barang</option>
                                                             <option value="Jasa">Jasa</option>
@@ -111,8 +108,7 @@
                                                 <div class="form-group mb-1">
                                                     <span>Vendor</span>
                                                     <select class="form-control form-control-sm select2" id="noVendor"
-                                                        name="noVendor" style="border-color:#9ca0a7;"
-                                                        value="{{ old('noVendor') }}" required>
+                                                        name="noVendor" style="border-color:#9ca0a7;" required>
                                                         <option value="">Pilih Vendor</option>
                                                     </select>
                                                 </div>
@@ -122,14 +118,13 @@
                                                         <span>Jenis Vendor</span>
                                                         <input type="text" class="form-control form-control-sm"
                                                             id="jenisVendor" name="jenisVendor"
-                                                            value="{{ old('jenisVendor') }}" style="border-color:#9ca0a7;">
+                                                            style="border-color:#9ca0a7;">
                                                     </div>
 
                                                     <div class="col form-group mb-1">
                                                         <span>Status PKP</span>
                                                         <input type="text" class="form-control form-control-sm"
-                                                            value="{{ old('statusPKP') }}" id="statusPKP" name="statusPKP"
-                                                            style="border-color:#9ca0a7;">
+                                                            id="statusPKP" name="statusPKP" style="border-color:#9ca0a7;">
                                                     </div>
                                                 </div>
 
@@ -137,14 +132,13 @@
                                                     <div class="col form-group mb-1">
                                                         <span>Alamat Vendor</span>
                                                         <textarea type="text" class="form-control form-control-sm" id="alamatVendor" name="alamatVendor"
-                                                            value="{{ old('alamatVendor') }}" style="border-color:#9ca0a7;"></textarea>
+                                                            style="border-color:#9ca0a7;"></textarea>
                                                     </div>
 
                                                     <div class="col form-group mb-1">
                                                         <span>No Telp</span>
                                                         <input type="text" class="form-control form-control-sm"
-                                                            id="noTelp" name="noTelp" value="{{ old('noTelp') }}"
-                                                            style="border-color:#9ca0a7;">
+                                                            id="noTelp" name="noTelp" style="border-color:#9ca0a7;">
                                                     </div>
                                                 </div>
                                             </div>
@@ -321,7 +315,7 @@
                             <!-- /.card-body -->
                             {{-- Button --}}
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-info">Submit</button>
+                                <button type="submit" class="btn btn-info">Update</button>
                                 <a href="{{ route('data.purchase') }}" class="btn btn-danger">Cancel</a>
                             </div>
                             {{-- /Button --}}
@@ -394,6 +388,26 @@
             tot = (jml * periode) * hrg
             $('#totHargaJasa').val(tot.toLocaleString())
         })
+
+        function deleteRow(r1) {
+            let i = r1.parentNode.parentNode.rowIndex;
+            document.getElementById("tabelPurchase").deleteRow(i);
+        }
+
+        function deleteJasa(j1) {
+            let i = j1.parentNode.parentNode.rowIndex;
+            document.getElementById("tabelPurchaseJasa").deleteRow(i);
+        }
+
+        function deleteRowEdt(r2) {
+            let i = r2.parentNode.parentNode.rowIndex;
+            document.getElementById("tabelPurchase").deleteRow(i);
+        }
+
+        function deleteJasaEdt(j2) {
+            let i = j2.parentNode.parentNode.rowIndex;
+            document.getElementById("tabelPurchaseJasa").deleteRow(i);
+        }
 
         $(document).on('change', '#category', function(e) {
             var _token = $('meta[name=csrf-token]').attr('content');
@@ -512,6 +526,8 @@
             })
         })
 
+
+
         $(document).on('change', '#pilihBarang', function() {
             // console.log($(this).data('id'))
 
@@ -533,7 +549,7 @@
             brid = dL.attr('id');
             br = dtBr.find(i => i.id === Number(brid))
             $('#jasaId').val(brid);
-            $('#namaJasa').val(br.nama_jasa);
+            $('#namaJasa').val(brid);
             $('#jenisJasa').val(br.jenis_jasa);
             $('#typeJasa').val(br.type_jasa);
             $('#uomJasa').val(br.uom);
@@ -549,14 +565,14 @@
                     $('#tbodyList').append(
                         `<tr>
                         <td><input type="hidden" name="brg_id[]" value="${$('#barangId').val()+'|'+$('#pilihBarang').val()+'|'+$('#merk').val()+'|'+$('#type').val()+'|'+$('#uom').val()+'|'+$('#qty').val()+'|'+$('#harga').val()+'|'+$('#totHarga').val()}" readonly>
-                            <input type="text" name="pilihBarang[]" value="${$('#pilihBarang').val()}" readonly>
+                            ${$('#pilihBarang').val()}
                         </td>
-                        <td><input type="text" readonly value="${$('#merk').val()}"></td>
-                        <td><input type="text" readonly value="${$('#type').val()}"></td>
-                        <td><input type="text" readonly value="${$('#uom').val()}"></td>
-                        <td><input type="text" readonly value="${$('#qty').val()}"></td>
-                        <td><input type="text" readonly value="${$('#harga').val()}"></td>
-                        <td><input type="text" readonly value="${$('#totHarga').val()}"></td>
+                        <td>${$('#merk').val()}</td>
+                        <td>${$('#type').val()}</td>
+                        <td>${$('#uom').val()}</td>
+                        <td>${$('#qty').val()}</td>
+                        <td>${$('#harga').val()}</td>
+                        <td>${$('#totHarga').val()}</td>
                         <td class="text-center"><input type="Button" onclick="deleteRow(this)" value="x" class="btn btn-sm btn-secondary"></td>
                     </tr>`
                     )
@@ -568,16 +584,16 @@
                     $('#tbodyListJasa').append(
                         `<tr>
                         <td><input type="hidden" name="jasa_id[]" value="${$('#jasaId').val()+'|'+$('#namaJasa').val()+'|'+$('#jenisJasa').val()+'|'+$('#typeJasa').val()+'|'+$('#uomJasa').val()+'|'+$('#qtyJasa').val()+'|'+$('#periodeJasa').val()+'|'+$('#startingJasa').val()+'|'+$('#hargaJasa').val()+'|'+$('#totHargaJasa').val()}" readonly>
-                            <input type="text" name="pilihBarang[]" value="${$('#namaJasa').val()}" readonly>
+                            ${$('#namaJasa').val()}" readonly>
                         </td>
-                        <td><input type="text" readonly value="${$('#jenisJasa').val()}"></td>
-                        <td><input type="text" readonly value="${$('#typeJasa').val()}"></td>
-                        <td><input type="text" readonly value="${$('#uomJasa').val()}"></td>
-                        <td><input type="text" readonly value="${$('#qtyJasa').val()}"></td>
-                        <td><input type="text" readonly value="${$('#periodeJasa').val()}"></td>
-                        <td><input type="text" readonly value="${$('#startingJasa').val()}"></td>
-                        <td><input type="text" readonly value="${$('#hargaJasa').val()}"></td>
-                        <td><input type="text" readonly value="${$('#totHargaJasa').val()}"></td>
+                        <td>${$('#jenisJasa').val()}</td>
+                        <td>${$('#typeJasa').val()}</td>
+                        <td>${$('#uomJasa').val()}</td>
+                        <td>${$('#qtyJasa').val()}</td>
+                        <td>${$('#periodeJasa').val()}</td>
+                        <td>${$('#startingJasa').val()}</td>
+                        <td>${$('#hargaJasa').val()}</td>
+                        <td>${$('#totHargaJasa').val()}</td>
                         <td class="text-center"><input type="Button" onclick="deleteJasa(this)" value="x" class="btn btn-sm btn-secondary"></td>
                     </tr>`
                     )
@@ -606,14 +622,125 @@
 
         })
 
-        function deleteRow(r) {
-            var i = r.parentNode.parentNode.rowIndex;
-            document.getElementById("tabelPurchase").deleteRow(i);
-        }
 
-        function deleteJasa(r) {
-            var i = r.parentNode.parentNode.rowIndex;
-            document.getElementById("tabelPurchaseJasa").deleteRow(i);
-        }
+        // });
+
+        $(document).ready(function() {
+
+            // $('.select2').select2();
+            var dtPur = {!! $dtPurchase !!}
+            var dtPurDet = {!! $dtPurchaseDet !!}
+            console.log('dtPur : ', dtPur);
+            console.log('dtPurDet : ', dtPurDet);
+
+            $('#noPengajuan').val(dtPur.no_pengajuan);
+            $('#purId').val(dtPur.id);
+            $('#tgl').val(dtPur.tgl);
+            $('#costCenter').val(dtPur.cost_center);
+            $('#branch').val(dtPur.branch);
+
+            $('#category').val(dtPur.category);
+            $('#category').change();
+
+            // $('#noVendor').val('2'); // Select the option with a value of '1'
+            // $('#noVendor').trigger('change'); // Notify any JS components that the value changed
+            // $('#jenisVendor').val(dtPur.no_pengajuan);
+
+            // $('#statusPKP').val(dtPur.no_pengajuan);
+            // $('#alamatVendor').val(dtPur.no_pengajuan);
+            // $('#noTelp').val(dtPur.no_pengajuan);
+
+            var _token = $('meta[name=csrf-token]').attr('content');
+            let category = $('#category').val();
+
+            $.ajax({
+                url: "{{ route('getVendor') }}",
+                type: "get",
+                data: {
+                    category: category,
+                    _token: _token,
+                },
+                success: function(v) {
+                    dtVendor = v;
+
+                    $('#noVendor').find('option').remove();
+                    $('#noVendor').append(`<option value="">Pilih Vendor</option>`);
+                    $.each(v, function(key, p) {
+                        $('#noVendor').append(
+                            `<option value="${p.id}">${p.nama_vendor}</option>`
+                        )
+                    })
+
+                    $('#noVendor').val(dtPur.no_vendor)
+                    $('#noVendor').change();
+
+
+                    if ($('#category').val() === "Barang") {
+                        $('#categoryBrg').show();
+                        $('#categoryJasa').hide();
+                        $('#tabelBrg').show();
+                        $('#tabelJasa').hide();
+                    }
+                    if ($('#category').val() === "Jasa") {
+                        $('#categoryBrg').hide();
+                        $('#categoryJasa').show();
+                        $('#tabelBrg').hide();
+                        $('#tabelJasa').show();
+                    }
+
+                }
+            })
+
+            for ($x = 0; $x < dtPurDet.length; $x++) {
+
+                if ($('#category').val() === "Barang") {
+                    // if ($('#pilihBarang').val() != "") {
+                    totHarga = dtPurDet[$x].qty * dtPurDet[$x].harga;
+                    $('#tbodyList').append(
+                        `<tr>
+                        <td><input type="hidden" name="brg_id[]" value="${dtPurDet[$x].br_id+'|'+dtPurDet[$x].nama_barang+'|'+dtPurDet[$x].merk+'|'+dtPurDet[$x].type+'|'+dtPurDet[$x].uom+'|'+dtPurDet[$x].qty+'|'+dtPurDet[$x].harga+'|'+totHarga}" readonly>
+                            ${dtPurDet[$x].nama_barang}
+                        </td>
+                        <td>${dtPurDet[$x].merk}</td>
+                        <td>${dtPurDet[$x].type}</td>
+                        <td>${dtPurDet[$x].uom}</td>
+                        <td class="text-center">${dtPurDet[$x].qty.toLocaleString()}</td>
+                        <td>${dtPurDet[$x].harga.toLocaleString()}</td>
+                        <td>${totHarga.toLocaleString()}</td>
+                        <td class="text-center"><input type="Button" onclick="deleteRowEdt(this)" value="x" class="btn btn-sm btn-secondary"></td>
+                    </tr>`
+                    )
+                    // }
+                }
+
+                if ($('#category').val() === "Jasa") {
+                    // if ($('#pilihJasa').val() != "") {
+                    totHarga = dtPurDet[$x].qty * dtPurDet[$x].harga;
+                    $('#tbodyListJasa').append(
+                        `<tr>
+                        <td><input type="hidden" name="jasa_id[]" value="${dtPurDet[$x].br_id+'|'+dtPurDet[$x].nama_jasa+'|'+dtPurDet[$x].jenis_jasa+'|'+dtPurDet[$x].type_jasa+'|'+dtPurDet[$x].uom+'|'+dtPurDet[$x].qty+'|'+dtPurDet[$x].periode+'|'+dtPurDet[$x].start_date+'|'+dtPurDet[$x].harga+'|'+totHarga}" readonly>
+                            ${dtPurDet[$x].nama_jasa}
+                        </td>
+                        <td>${dtPurDet[$x].jenis_jasa}</td>
+                        <td>${dtPurDet[$x].type_jasa}</td>
+                        <td>${dtPurDet[$x].uom}</td>
+                        <td class="text-center">${dtPurDet[$x].qty.toLocaleString()}</td>
+                        <td class="text-center">${dtPurDet[$x].periode}</td>
+                        <td>${dtPurDet[$x].start_date}</td>
+                        <td>${dtPurDet[$x].harga}</td>
+                        <td>${dtPurDet[$x].total.toLocaleString()}</td>
+                        <td class="text-center"><input type="Button" onclick="deleteJasaEdt(this)" value="x" class="btn btn-sm btn-secondary"></td>
+                    </tr>`
+                    )
+                    // }
+                }
+
+            }
+
+
+
+
+
+        });
     </script>
 @endpush

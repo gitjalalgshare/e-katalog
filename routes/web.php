@@ -6,6 +6,7 @@ use App\Http\Controllers\InputJasaController;
 use App\Http\Controllers\inputPurchaseController;
 use App\Http\Controllers\formPurchaseController;
 use App\Http\Controllers\editformPurchaseController;
+use App\Http\Controllers\EditPurchaseController;
 use App\Http\Controllers\inputVendorController;
 use App\Http\Controllers\katalogBarangController;
 use App\Http\Controllers\katalogJasaController;
@@ -52,9 +53,17 @@ Route::post('/updateDataVendor', [inputVendorController::class, 'updateDataVendo
 
 //purchase
 Route::get('/dataPurchase', [inputPurchaseController::class, 'dataPurchase'])->name('data.purchase');
+Route::get('/getDataPurchase', [inputPurchaseController::class, 'getDataPurchase'])->name('getDataPurchase');
+Route::get('/getDataPurchaseJasa', [inputPurchaseController::class, 'getDataPurchaseJasa'])->name('getDataPurchaseJasa');
 Route::get('/inputPurchase', [inputPurchaseController::class, 'inputPurchase'])->name('input.purchase');
 
 Route::get('/getVendor', [inputPurchaseController::class, 'getVendor'])->name('getVendor');
+Route::get('/getProd', [inputPurchaseController::class, 'getProd'])->name('getProd');
+
+Route::post('/simpanPurchase', [inputPurchaseController::class, 'simpanPurchase'])->name('simpan.purchase');
+
+Route::get('/editPurchase/{id}', [EditPurchaseController::class, 'editPurchase'])->name('editPurchase');
+Route::post('/updatePurchase', [EditPurchaseController::class, 'updatePurchase'])->name('update.purchase');
 //End Purchase
 
 
