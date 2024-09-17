@@ -78,13 +78,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ route('katalog.barang') }}" class="nav-link">
+                            <a href="{{ route('katalogBarang') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Katalog Barang</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('katalog.jasa') }}" class="nav-link">
+                            <a href="{{ route('katalogJasa') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Katalog Jasa</p>
                             </a>
