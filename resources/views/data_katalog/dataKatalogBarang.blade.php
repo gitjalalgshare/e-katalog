@@ -8,12 +8,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Data Purchasing</h1>
+                        <h1>Data Katalog Barang</h1>
                     </div>
                     <div class="col-sm-6">
-                        <div class="float-sm-right">
+                        {{-- <div class="float-sm-right">
                             <a href="{{ route('input.purchase') }}" class="btn btn-primary">Add Purchase</a>
-                        </div>
+                        </div> --}}
                         {{-- <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
                             <li class="breadcrumb-item active">Project Add</li>
@@ -29,9 +29,9 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="card card-primary">
-                            <div class="card-header">
+                            {{-- <div class="card-header">
                                 <h3 class="card-title">Data Purchase Barang</h3>
-                            </div>
+                            </div> --}}
                             <div class="container-fluid">
                                 <div class="row mt-3">
                                     {{-- <div class="col-9">
@@ -58,7 +58,7 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Nomor Pengajuan</th>
+                                            {{-- <th>Nomor Pengajuan</th> --}}
                                             <th>Nama Barang</th>
                                             <th>Merk</th>
                                             <th>Type</th>
@@ -88,69 +88,7 @@
                 </div>
                 <hr>
 
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card card-primary">
-                            <div class="card-header ">
-                                <h3 class="card-title">Data Purchase Jasa</h3>
-                            </div>
-                            <div class="container-fluid">
-                                <div class="row mt-3">
-                                    {{-- <div class="col-9">
-                                        <a href="{{ route('input.purchase') }}" class="btn btn-primary">Add Purchase
-                                            Service</a>
-                                    </div> --}}
-                                    {{-- <div class="card-tools">
-                                        <div class="input-group input-group-sm" style="width: 300px;">
-                                            <input type="text" name="table_search" class="form-control float-right"
-                                                placeholder="Search">
-                                            <div class="input-group-append">
-                                                <button type="submit" class="btn btn-default">
-                                                    <i class="fas fa-search"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div> --}}
-                                </div>
-                            </div><!-- /.container-fluid -->
 
-                            <!-- /.card-header -->
-                            <div class="card-body table-responsive p-2">
-                                <table class="table table-hover text-nowrap" id="tabelPurchaseJasa" name="tabelPurchaseJasa"
-                                    style="font-size: 12px;">
-                                    <thead>
-                                        <tr>
-                                            <th>No</th>
-                                            <th>Nomor Pengajuan</th>
-                                            <th>Nama Jasa</th>
-                                            <th>Jenis</th>
-                                            <th>Type</th>
-                                            <th>Uom</th>
-                                            <th>Qty</th>
-                                            <th>Periode (month)</th>
-                                            <th>Starting Date</th>
-                                            <th>Harga Satuan</th>
-                                            <th>Total Harga</th>
-                                            <th>Branch</th>
-                                            <th>Bulan</th>
-                                            <th>Tahun</th>
-                                            <th>Vendor</th>
-                                            <th>Alamat</th>
-                                            <th>Status PKP</th>
-                                            <th>#</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-
-
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- /.card-body -->
-                        </div>
-                        <!-- /.card -->
-                    </div>
-                </div>
             </div><!-- /.container-fluid -->
         </section>
         <!-- /.content -->
@@ -192,7 +130,7 @@
                     processing: true,
                     serverSide: true,
                     ajax: {
-                        url: "{{ route('getDataPurchase') }}",
+                        url: "{{ route('getDataPurchaseBarang') }}",
                         type: "get",
                         dataType: "json",
                         // data: datafilter
@@ -204,9 +142,9 @@
                             // orderable: false,
                             searchable: false,
                         },
-                        {
-                            data: 'no_pengajuan',
-                        },
+                        // {
+                        //     data: 'no_pengajuan',
+                        // },
                         {
                             data: 'nama_barang',
                         },

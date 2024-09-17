@@ -66,9 +66,18 @@ Route::get('/editPurchase/{id}', [EditPurchaseController::class, 'editPurchase']
 Route::post('/updatePurchase', [EditPurchaseController::class, 'updatePurchase'])->name('update.purchase');
 //End Purchase
 
+//List Katalog
+Route::get('/katalogBarang', [katalogBarangController::class, 'katalogBarang'])->name('katalogBarang');
+Route::get('/getDataPurchaseBarang', [katalogBarangController::class, 'getDataPurchaseBarang'])->name('getDataPurchaseBarang');
+Route::get('/showPurchase/{id}', [katalogBarangController::class, 'showPurchase'])->name('showPurchase');
+
+Route::get('/katalogJasa', [katalogJasaController::class, 'katalogJasa'])->name('katalogJasa');
+Route::get('/getDataPurchaseJasa', [katalogJasaController::class, 'getDataPurchaseJasa'])->name('getDataPurchaseJasa');
+Route::get('/showPurchaseJasa/{id}', [katalogJasaController::class, 'showPurchaseJasa'])->name('showPurchaseJasa');
+
+//End List Katalog
+
 
 Route::get('/editformPurchase', [editformPurchaseController::class, 'editform_purchase'])->name('editform.purchase');
 Route::get('/inputVendor', [inputVendorController::class, 'input_vendor'])->name('input.vendor');
-Route::get('/katalogBarang', [katalogJasaController::class, 'katalog_jasa'])->name('katalog.jasa');
-Route::get('/katalogJasa', [katalogBarangController::class, 'katalog_barang'])->name('katalog.barang');
 Route::get('/user', [userController::class, 'User'])->name('user');
