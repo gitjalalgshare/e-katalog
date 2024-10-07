@@ -96,7 +96,7 @@
                     <section class="col-lg-7 connectedSortable">
                         <!-- Custom tabs (Charts with tabs)-->
                         <div class="card">
-                            <div class="card-header">
+                            <div class="card-header ">
                                 <h3 class="card-title">
                                     <i class="fas fa-chart-pie mr-1"></i>
                                     Grafik Pembelian
