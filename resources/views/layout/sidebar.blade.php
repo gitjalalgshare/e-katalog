@@ -26,7 +26,8 @@
                     </a>
                 </li>
                 <li class="nav-header">DATA MASTER</li>
-                <li class="nav-item  {{ request()->is('dataBarang', 'dataJasa', 'dataVendor') ? 'menu-open' : '' }}">
+                <li
+                    class="nav-item  {{ request()->is('dataBarang', 'dataJasa', 'dataVendor', 'dataPurchase') ? 'menu-open' : '' }}">
                     <a href="#"
                         class="nav-link  {{ request()->is('dataBarang', 'dataJasa', 'dataVendor') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-edit"></i>
@@ -58,7 +59,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('data.purchase') }}" class="nav-link">
+                            <a href="{{ route('data.purchase') }}"
+                                class="nav-link {{ request()->is('dataPurchase') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Data Purchase</p>
                             </a>
